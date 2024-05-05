@@ -35,6 +35,8 @@ public class DataRead {
 
     @Override
     public String toString() {
-        return imei + ";" + date + ";" + hour + ";" + latitude + ";" + longitude;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-dd-MM");
+        String dateString = formatter.format(date);
+        return "Imei: " + imei + "; Data: " + dateString + "; Hora: " + hour + "; Latitude: " + latitude + "; Longitude: " + longitude;
     }
 }
